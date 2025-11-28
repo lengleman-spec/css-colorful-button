@@ -36,6 +36,7 @@ button::before {
   right: -3px;
   left: -3px;
   background-image: linear-gradient(
+    115deg,
     var(--grad-color1),
     var(--grad-color2),
     var(--grad-color3),
@@ -44,6 +45,10 @@ button::before {
   );
   border-radius: 4px;
   z-index: -1;
+}
+
+button:hover {
+  font-size: 2.25rem;
 }
 
 .container {
