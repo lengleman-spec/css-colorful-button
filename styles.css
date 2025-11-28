@@ -19,6 +19,31 @@ body {
 
 button {
   font-family: "Karla";
+  font-size: 2rem;
+  color: #cbcbcb;
+  padding: 30px 60px;
+  position: relative;
+  border-radius: 2px;
+  border: none;
+  background: var(--btn-bg);
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  bottom: -3px;
+  right: -3px;
+  left: -3px;
+  background-image: linear-gradient(
+    var(--grad-color1),
+    var(--grad-color2),
+    var(--grad-color3),
+    var(--grad-color4),
+    var(--grad-color5)
+  );
+  border-radius: 4px;
+  z-index: -1;
 }
 
 .container {
