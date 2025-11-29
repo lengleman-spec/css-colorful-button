@@ -2,6 +2,8 @@ html,
 body {
   margin: 0;
   padding: 0;
+  background-color: var(--body-bg);
+  font-family: var(--font-family);
 }
 
 :root {
@@ -17,10 +19,55 @@ body {
   --grad-color5: #6a0d83;
 }
 
-button {
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.button-border {
+  background: linear-gradient(
+    115deg,
+    var(--grad-color1),
+    var(--grad-color2),
+    var(--grad-color3),
+    var(--grad-color4),
+    var(--grad-color5)
+  );
+  padding: 2px;
+}
+
+.button {
+  border: none;
+  background: var(--btn-bg);
+  color: var(--btn-color);
+  padding: 1em 1.5em;
+  font-family: inherit;
+  letter-spacing: 0.1em;
+}
+
+.button-border:hover {
+  background: linear-gradient(
+    230deg,
+    var(--grad-color1),
+    var(--grad-color2),
+    var(--grad-color3),
+    var(--grad-color4),
+    var(--grad-color5)
+  );
+}
+
+.button-border:hover button {
+  color: var(--btn-color-hover);
+  padding: 1.1em 1.6em;
+  transition: 0.4s ease;
+}
+
+/* button {
   font-family: "Karla";
   font-size: 2rem;
-  color: #cbcbcb;
+  color: #868585;
   padding: 30px 60px;
   position: relative;
   border-radius: 2px;
@@ -35,7 +82,7 @@ button::before {
   bottom: -3px;
   right: -3px;
   left: -3px;
-  background-image: linear-gradient(
+  background: linear-gradient(
     115deg,
     var(--grad-color1),
     var(--grad-color2),
@@ -45,10 +92,23 @@ button::before {
   );
   border-radius: 4px;
   z-index: -1;
+  transition: 0.4s ease;
 }
 
 button:hover {
   font-size: 2.25rem;
+  color: #fff;
+}
+
+button:hover::before {
+  background: linear-gradient(
+    115deg,
+    var(--grad-color5),
+    var(--grad-color4),
+    var(--grad-color3),
+    var(--grad-color2),
+    var(--grad-color1)
+  );
 }
 
 .container {
@@ -56,4 +116,4 @@ button:hover {
   justify-content: center;
   align-items: center;
   height: 100vh;
-}
+} */
